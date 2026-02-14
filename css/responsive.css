@@ -1,0 +1,338 @@
+/* ===== VIONIX TECHNOLOGIES — RESPONSIVE DESIGN ===== */
+
+/* --- Tablets & Small Laptops (≤1200px) --- */
+@media(max-width:1200px) {
+    .hero-inner {
+        gap: 40px
+    }
+
+    .hero-visual {
+        height: 400px
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+/* --- Tablets Portrait (≤992px) --- */
+@media(max-width:992px) {
+
+    .nav-menu,
+    .nav-actions {
+        display: none
+    }
+
+    .hamburger {
+        display: flex
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center
+    }
+
+    .hero-visual {
+        height: 350px;
+        margin-top: 20px
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .hero-buttons {
+        justify-content: center
+    }
+
+    .hero-trust {
+        justify-content: center
+    }
+
+    .hero-badge {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr
+    }
+
+    .why-image {
+        order: -1
+    }
+
+    .why-image img {
+        min-height: 350px
+    }
+
+    .amc-grid {
+        grid-template-columns: 1fr
+    }
+
+    .cctv-grid {
+        grid-template-columns: 1fr
+    }
+
+    .cloud-grid {
+        grid-template-columns: 1fr
+    }
+
+    .cloud-visual {
+        order: -1
+    }
+
+    .consultation-grid {
+        grid-template-columns: 1fr
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center
+    }
+}
+
+/* --- Mobile Landscape (≤768px) --- */
+@media(max-width:768px) {
+    .services-grid {
+        grid-template-columns: 1fr
+    }
+
+    .hardware-grid {
+        grid-template-columns: 1fr
+    }
+
+    .form-row {
+        grid-template-columns: 1fr
+    }
+
+    .hero-visual {
+        height: 300px
+    }
+
+    .floating-card {
+        padding: 10px 14px;
+        font-size: .78rem
+    }
+
+    .floating-card i {
+        font-size: 1rem
+    }
+
+    .hero-title {
+        font-size: clamp(1.8rem, 6vw, 2.6rem)
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 5vw, 2.2rem)
+    }
+
+    .cta-content h2 {
+        font-size: clamp(1.4rem, 5vw, 2rem)
+    }
+
+    .floating-call {
+        display: flex
+    }
+
+    .page-banner {
+        padding: 120px 0 60px
+    }
+}
+
+/* --- Mobile Portrait (≤576px) --- */
+@media(max-width:576px) {
+    .container {
+        padding: 0 16px
+    }
+
+    .hero-section {
+        padding: 100px 0 60px
+    }
+
+    .hero-visual {
+        height: 260px
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center
+    }
+
+    .hero-trust {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px
+    }
+
+    .stat-card {
+        padding: 24px 16px
+    }
+
+    .stat-number {
+        font-size: 2rem
+    }
+
+    .services-section,
+    .why-section,
+    .amc-section,
+    .cctv-section,
+    .hardware-section,
+    .cloud-section,
+    .projects-section,
+    .testimonials-section,
+    .consultation-section {
+        padding: 60px 0
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem
+    }
+
+    .project-filters {
+        gap: 6px
+    }
+
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: .8rem
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        justify-content: center
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr
+    }
+
+    .floating-whatsapp {
+        width: 52px;
+        height: 52px;
+        font-size: 1.3rem;
+        bottom: 20px;
+        right: 20px
+    }
+
+    .floating-call {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+        bottom: 82px;
+        right: 20px
+    }
+
+    .back-to-top {
+        left: 20px;
+        bottom: 20px;
+        width: 38px;
+        height: 38px
+    }
+
+    .consultation-form-wrapper {
+        padding: 24px
+    }
+
+    .mobile-menu {
+        width: 85%
+    }
+
+    .why-image img {
+        min-height: 260px
+    }
+
+    .amc-3d-server {
+        padding: 24px 18px
+    }
+
+    .orb-core {
+        width: 55px;
+        height: 55px
+    }
+
+    .ring-1 {
+        width: 80px;
+        height: 80px
+    }
+
+    .ring-2 {
+        width: 110px;
+        height: 110px
+    }
+
+    .ring-3 {
+        width: 140px;
+        height: 140px
+    }
+}
+
+/* --- Small Phones (≤400px) --- */
+@media(max-width:400px) {
+    .hero-title {
+        font-size: 1.6rem
+    }
+
+    .hero-subtitle {
+        font-size: .95rem
+    }
+
+    .stat-card {
+        padding: 18px 12px
+    }
+
+    .stat-number {
+        font-size: 1.7rem
+    }
+
+    .service-card-body {
+        padding: 18px
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: .88rem
+    }
+}
