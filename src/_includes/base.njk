@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle }} — {{ site.companyFull }}</title>
+    <meta name="description" content="{{ pageDescription }}">
+    <meta name="author" content="{{ site.companyFull }}">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ pageTitle }} — {{ site.companyFull }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">V</div>
+            <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header id="navbar" class="navbar">
+        <div class="container navbar-inner">
+            <a href="/" class="logo" aria-label="{{ site.companyFull }} Home">
+                <div class="logo-icon">V</div>
+                <div class="logo-text">
+                    <span class="logo-name">{{ site.companyName }}</span>
+                    <span class="logo-sub">Technologies</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link{% if activePage == 'home' %} active{% endif %}">Home</a>
+                <a href="/about/" class="nav-link{% if activePage == 'about' %} active{% endif %}">About</a>
+                <a href="/services/" class="nav-link{% if activePage == 'services' %} active{% endif %}">Services</a>
+                <a href="/server-amc/" class="nav-link{% if activePage == 'server-amc' %} active{% endif %}">Server AMC</a>
+                <a href="/projects/" class="nav-link{% if activePage == 'projects' %} active{% endif %}">Projects</a>
+                <a href="/contact/" class="nav-link{% if activePage == 'contact' %} active{% endif %}">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="{{ site.phoneLink }}" class="nav-btn nav-btn-call" aria-label="Call Now">
+                    <i class="fas fa-phone"></i> <span>Call Now</span>
+                </a>
+                <a href="{{ site.whatsappLink }}" class="nav-btn nav-btn-whatsapp" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+                </a>
+                <a href="/contact/" class="nav-btn nav-btn-cta">Free Consultation</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <a href="/" class="mobile-link{% if activePage == 'home' %} active{% endif %}">Home</a>
+            <a href="/about/" class="mobile-link{% if activePage == 'about' %} active{% endif %}">About</a>
+            <a href="/services/" class="mobile-link{% if activePage == 'services' %} active{% endif %}">Services</a>
+            <a href="/server-amc/" class="mobile-link{% if activePage == 'server-amc' %} active{% endif %}">Server AMC</a>
+            <a href="/projects/" class="mobile-link{% if activePage == 'projects' %} active{% endif %}">Projects</a>
+            <a href="/contact/" class="mobile-link{% if activePage == 'contact' %} active{% endif %}">Contact</a>
+            <div class="mobile-actions">
+                <a href="{{ site.phoneLink }}" class="nav-btn nav-btn-call"><i class="fas fa-phone"></i> Call Now</a>
+                <a href="{{ site.whatsappLink }}" class="nav-btn nav-btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">V</div>
+                        <div class="logo-text"><span class="logo-name">{{ site.companyName }}</span><span class="logo-sub">Technologies</span></div>
+                    </div>
+                    <p>{{ site.tagline }}. Cutting-edge technology solutions empowering businesses worldwide.</p>
+                    <div class="footer-social">
+                        <a href="{{ site.facebook }}"><i class="fab fa-facebook-f"></i></a>
+                        <a href="{{ site.twitter }}"><i class="fab fa-twitter"></i></a>
+                        <a href="{{ site.linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="{{ site.instagram }}"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a><a href="/about/">About Us</a><a href="/services/">Services</a>
+                    <a href="/server-amc/">Server AMC</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="/services/">Web Development</a><a href="/services/">Mobile Apps</a>
+                    <a href="/services/">CCTV Installation</a><a href="/services/">Server AMC</a>
+                    <a href="/services/">Hardware Repair</a><a href="/services/">Cloud & Security</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="{{ site.phoneLink }}">{{ site.phone }}</a></div>
+                    <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="{{ site.whatsappLink }}">{{ site.whatsapp }}</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>{{ site.address }}</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ site.copyright }} {{ site.companyFull }}. All Rights Reserved.</p>
+                <p>{{ site.description }}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <a href="{{ site.whatsappLink }}" class="floating-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i><span class="tooltip">Chat with us</span></a>
+    <a href="{{ site.phoneLink }}" class="floating-call"><i class="fas fa-phone"></i></a>
+    <button id="backToTop" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+    <script src="/js/main.js"></script>
+</body>
+</html>

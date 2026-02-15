@@ -1,0 +1,33 @@
+{
+    "badge": "24/7 IT Support — Worldwide Coverage",
+    "title_line1": "Smart",
+    "title_highlight": "IT Solutions",
+    "title_line2": "for Modern Businesses",
+    "subtitle": "We provide complete IT services including Web Applications, Mobile Apps, Website Development, Server AMC, CCTV Installation, Networking, Hardware Support, Cloud Backup, and Cybersecurity.",
+    "stats": [
+        {
+            "icon": "fas fa-project-diagram",
+            "count": 1,
+            "label": "Projects Completed",
+            "suffix": ""
+        },
+        {
+            "icon": "fas fa-smile-beam",
+            "count": 1,
+            "label": "Happy Clients",
+            "suffix": ""
+        },
+        {
+            "icon": "fas fa-headset",
+            "count": 24,
+            "label": "Support Available",
+            "suffix": "/7"
+        },
+        {
+            "icon": "fas fa-bolt",
+            "count": 30,
+            "label": "Avg Response Time",
+            "suffix": "min"
+        }
+    ]
+}

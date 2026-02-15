@@ -1,0 +1,13 @@
+{
+  "name": "vertaxes-website",
+  "version": "2.0.0",
+  "description": "Vertaxes Technologies - Premium IT Company Website with CMS",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "clean": "rimraf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

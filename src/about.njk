@@ -1,0 +1,119 @@
+---
+layout: base.njk
+pageTitle: "About Us"
+pageDescription: "Learn about Vertaxes Technologies — a leading IT solutions company providing worldwide IT support, development, and maintenance services."
+activePage: "about"
+permalink: /about/
+---
+
+<section class="page-banner">
+    <h1>About <span class="gradient-text">{{ site.companyFull }}</span></h1>
+    <p>Your trusted partner for end-to-end IT solutions and services worldwide</p>
+    <div class="breadcrumb"><a href="/">Home</a> <span>/</span> <span>About Us</span></div>
+</section>
+
+<section style="padding:80px 0;background:var(--bg)">
+    <div class="container">
+        <div class="why-grid">
+            <div class="why-image" data-animate="fade-right">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="Vertaxes Team" loading="lazy">
+            </div>
+            <div class="why-content" data-animate="fade-left">
+                <span class="section-tag">{{ about.intro_tag }}</span>
+                <h2 class="section-title">{{ about.intro_title | replace("Smart IT Solutions", "Smart IT <span class='gradient-text'>Solutions</span>") | safe }}</h2>
+                <p class="why-desc">{{ about.intro_text }}</p>
+                <p style="color:var(--grey);line-height:1.8">{{ about.intro_text2 }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding:80px 0;background:linear-gradient(180deg,var(--bg),#EEF2FF)">
+    <div class="container">
+        <div class="section-header" data-animate="fade-up">
+            <span class="section-tag">Our Purpose</span>
+            <h2 class="section-title">Mission & <span class="gradient-text">Vision</span></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+            <div class="testimonial-card" data-animate="fade-up" style="background:rgba(255,255,255,.6);backdrop-filter:blur(20px);border:1px solid rgba(37,99,235,.1)">
+                <div style="width:56px;height:56px;background:var(--gradient-btn);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+                    <i class="fas fa-bullseye" style="color:#fff;font-size:1.3rem"></i></div>
+                <h3 style="margin-bottom:10px">Our Mission</h3>
+                <p style="color:var(--grey);line-height:1.8">{{ about.mission }}</p>
+            </div>
+            <div class="testimonial-card" data-animate="fade-up" data-delay="100" style="background:rgba(255,255,255,.6);backdrop-filter:blur(20px);border:1px solid rgba(6,182,212,.1)">
+                <div style="width:56px;height:56px;background:var(--gradient-btn);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+                    <i class="fas fa-eye" style="color:#fff;font-size:1.3rem"></i></div>
+                <h3 style="margin-bottom:10px">Our Vision</h3>
+                <p style="color:var(--grey);line-height:1.8">{{ about.vision }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding:80px 0;background:var(--bg)">
+    <div class="container">
+        <div class="section-header" data-animate="fade-up">
+            <span class="section-tag">What Drives Us</span>
+            <h2 class="section-title">Our Core <span class="gradient-text">Values</span></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            {% set values = [
+                {"icon":"fas fa-handshake","name":"Integrity","desc":"Honest, transparent business practices with every client interaction"},
+                {"icon":"fas fa-rocket","name":"Innovation","desc":"Embracing the latest technologies to deliver modern solutions"},
+                {"icon":"fas fa-users","name":"Customer First","desc":"Your success is our priority — we go the extra mile every time"},
+                {"icon":"fas fa-shield-halved","name":"Security","desc":"Protecting your data and infrastructure with enterprise-grade security"},
+                {"icon":"fas fa-clock","name":"Reliability","desc":"24/7 support with fast response times you can count on"},
+                {"icon":"fas fa-chart-line","name":"Growth","desc":"Scalable solutions designed to grow alongside your business"}
+            ] %}
+            {% for val in values %}
+            <div class="service-card" data-animate="fade-up" data-delay="{{ loop.index0 * 50 }}" style="border:none">
+                <div class="service-card-body" style="text-align:center;padding:36px 24px">
+                    <div class="service-icon" style="margin:-5px auto 16px"><i class="{{ val.icon }}"></i></div>
+                    <h3>{{ val.name }}</h3>
+                    <p>{{ val.desc }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section style="padding:80px 0;background:var(--navy);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,99,235,.2),transparent 60%)"></div>
+    <div class="container" style="position:relative;z-index:2;text-align:center">
+        <span class="section-tag" style="background:rgba(255,255,255,.1);color:var(--cyan)" data-animate="fade-up">Global Reach</span>
+        <h2 class="section-title" style="color:#fff;margin-bottom:16px" data-animate="fade-up">Worldwide Support <span class="gradient-text">Coverage</span></h2>
+        <p style="color:rgba(255,255,255,.7);max-width:600px;margin:0 auto 40px;font-size:1.05rem" data-animate="fade-up">Based in {{ site.address }} — serving clients across all Indian states and worldwide through remote support.</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px" data-animate="fade-up">
+            {% set regions = [
+                {"icon":"fas fa-location-dot","title":"Chennai HQ","desc":"Our home base"},
+                {"icon":"fas fa-map-location-dot","title":"All India","desc":"Pan-India coverage"},
+                {"icon":"fas fa-globe","title":"Worldwide","desc":"Remote support"},
+                {"icon":"fas fa-headset","title":"24/7","desc":"Always available"}
+            ] %}
+            {% for r in regions %}
+            <div style="background:rgba(255,255,255,.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px 16px;text-align:center">
+                <i class="{{ r.icon }}" style="font-size:1.5rem;color:var(--cyan);margin-bottom:10px;display:block"></i>
+                <h4 style="color:#fff;margin-bottom:4px;font-size:1rem">{{ r.title }}</h4>
+                <p style="color:rgba(255,255,255,.5);font-size:.85rem">{{ r.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-bg-anim"></div>
+    <div class="container">
+        <div class="cta-content" data-animate="fade-up">
+            <h2>Ready to Work With Us?</h2>
+            <p>Get in touch to discuss your IT needs and discover how we can help your business grow.</p>
+            <div class="cta-buttons">
+                <a href="{{ site.phoneLink }}" class="btn btn-white btn-glow"><i class="fas fa-phone"></i> Call Now</a>
+                <a href="{{ site.whatsappLink }}" class="btn btn-whatsapp-alt btn-glow" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+                <a href="/contact/" class="btn btn-outline-white"><i class="fas fa-paper-plane"></i> Send Enquiry</a>
+            </div>
+        </div>
+    </div>
+</section>

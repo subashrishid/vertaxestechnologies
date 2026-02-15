@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Web Application Development",
+        "icon": "fas fa-laptop-code",
+        "image": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
+        "desc": "Custom web applications built with modern frameworks for scalable, high-performance digital solutions.",
+        "features": [
+            "Custom CRM & ERP Systems",
+            "E-Commerce Platforms",
+            "SaaS Application Development",
+            "API Development & Integration"
+        ]
+    },
+    {
+        "name": "Mobile App Development",
+        "icon": "fas fa-mobile-screen-button",
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
+        "desc": "Native and cross-platform mobile apps for Android & iOS with stunning UI and robust performance.",
+        "features": [
+            "Android & iOS Native Apps",
+            "Cross-Platform (React Native/Flutter)",
+            "App Store Deployment",
+            "Maintenance & Updates"
+        ]
+    },
+    {
+        "name": "Website Design & Maintenance",
+        "icon": "fas fa-palette",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+        "desc": "Stunning responsive websites with ongoing maintenance to keep your digital presence polished and updated.",
+        "features": [
+            "Responsive & Modern Design",
+            "SEO Optimization",
+            "Content Management Systems",
+            "Regular Maintenance & Updates"
+        ]
+    },
+    {
+        "name": "IT Hardware Repair & Support",
+        "icon": "fas fa-screwdriver-wrench",
+        "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&q=80",
+        "desc": "Expert diagnostics and repair services for all IT hardware with quick turnaround times.",
+        "features": [
+            "Laptop & Desktop Repair",
+            "Printer Repair & Service",
+            "Component-Level Servicing",
+            "Data Recovery"
+        ]
+    },
+    {
+        "name": "Laptop / Desktop Repair",
+        "icon": "fas fa-laptop-medical",
+        "image": "https://images.unsplash.com/photo-1588702547919-26089e690ecc?w=600&q=80",
+        "desc": "Professional laptop and desktop repair including motherboard, screen, and component-level servicing.",
+        "features": [
+            "Screen Replacement",
+            "Motherboard Repair",
+            "OS Installation",
+            "Performance Optimization"
+        ]
+    },
+    {
+        "name": "Printer Repair & Service",
+        "icon": "fas fa-print",
+        "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&q=80",
+        "desc": "Complete printer maintenance, repair, and setup services for all major brands and models.",
+        "features": [
+            "Inkjet & Laser Repair",
+            "Toner Replacement",
+            "Network Printer Setup",
+            "Regular Servicing"
+        ]
+    },
+    {
+        "name": "CCTV Installation & Service",
+        "icon": "fas fa-video",
+        "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80",
+        "desc": "Professional CCTV setup with DVR/NVR configuration, remote viewing, and 24/7 monitoring solutions.",
+        "features": [
+            "Home & Office CCTV Setup",
+            "DVR/NVR Configuration",
+            "Remote Viewing Setup",
+            "Annual Maintenance"
+        ]
+    },
+    {
+        "name": "Networking & WiFi Setup",
+        "icon": "fas fa-network-wired",
+        "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80",
+        "desc": "Enterprise-grade networking solutions including structured cabling, WiFi optimization, and VPN setup.",
+        "features": [
+            "Structured Cabling",
+            "WiFi Optimization",
+            "VPN & Firewall Setup",
+            "Network Monitoring"
+        ]
+    },
+    {
+        "name": "Server Setup & AMC",
+        "icon": "fas fa-server",
+        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+        "desc": "Complete server installation, configuration, and Annual Maintenance Contracts for uninterrupted operations.",
+        "features": [
+            "Server Installation & Configuration",
+            "24/7 Monitoring",
+            "Data Backup & Recovery",
+            "Security Updates & Patches"
+        ]
+    },
+    {
+        "name": "Cloud Backup & Data Recovery",
+        "icon": "fas fa-cloud-arrow-up",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
+        "desc": "Automated cloud backup solutions with disaster recovery planning and data restoration services.",
+        "features": [
+            "Cloud Migration & Backup",
+            "Disaster Recovery Planning",
+            "Data Restoration",
+            "Automated Scheduling"
+        ]
+    },
+    {
+        "name": "Firewall & Cyber Security",
+        "icon": "fas fa-user-shield",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
+        "desc": "Advanced cybersecurity solutions including firewall setup, threat monitoring, and vulnerability assessment.",
+        "features": [
+            "Firewall Configuration",
+            "Threat Monitoring",
+            "Vulnerability Assessment",
+            "Security Audits"
+        ]
+    }
+]

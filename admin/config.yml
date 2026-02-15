@@ -1,0 +1,129 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # ===== SITE SETTINGS =====
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - name: "site"
+        label: "Global Settings (Email, Phone, WhatsApp)"
+        file: "_data/site.json"
+        fields:
+          - { label: "Company Name", name: "companyName", widget: "string", default: "Vertaxes" }
+          - { label: "Company Full Name", name: "companyFull", widget: "string", default: "Vertaxes Technologies" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Phone Link (tel:+91...)", name: "phoneLink", widget: "string" }
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string" }
+          - { label: "WhatsApp Link (https://wa.me/91...)", name: "whatsappLink", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Admin Email (for notifications)", name: "adminEmail", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "Twitter URL", name: "twitter", widget: "string", required: false }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+          - { label: "Copyright Year", name: "copyright", widget: "string" }
+          - { label: "Video File Path", name: "videoFile", widget: "string", default: "/videos/intro.mp4" }
+          - { label: "Video Section Title", name: "videoTitle", widget: "string" }
+          - { label: "Video Section Subtitle", name: "videoSubtitle", widget: "string" }
+
+  # ===== HOME PAGE =====
+  - name: "homepage"
+    label: "🏠 Home Page"
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "_data/home.json"
+        fields:
+          - { label: "Hero Badge Text", name: "badge", widget: "string" }
+          - { label: "Hero Title Line 1", name: "title_line1", widget: "string" }
+          - { label: "Hero Title Highlight", name: "title_highlight", widget: "string" }
+          - { label: "Hero Title Line 2", name: "title_line2", widget: "string" }
+          - { label: "Hero Subtitle", name: "subtitle", widget: "text" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Icon (Font Awesome class)", name: "icon", widget: "string" }
+              - { label: "Count Number", name: "count", widget: "number" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Suffix (e.g. /7, min)", name: "suffix", widget: "string", required: false }
+
+  # ===== ABOUT PAGE =====
+  - name: "aboutpage"
+    label: "ℹ️ About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "_data/about.json"
+        fields:
+          - { label: "Intro Tag", name: "intro_tag", widget: "string" }
+          - { label: "Intro Title", name: "intro_title", widget: "string" }
+          - { label: "Intro Text", name: "intro_text", widget: "text" }
+          - { label: "Intro Text (paragraph 2)", name: "intro_text2", widget: "text" }
+          - { label: "Our Mission", name: "mission", widget: "text" }
+          - { label: "Our Vision", name: "vision", widget: "text" }
+
+  # ===== SERVICES =====
+  - name: "services"
+    label: "🛠️ Services"
+    files:
+      - name: "services_list"
+        label: "Services List"
+        file: "_data/services.json"
+        fields:
+          - label: "Services"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Service Name", name: "name", widget: "string" }
+              - { label: "Icon (Font Awesome class)", name: "icon", widget: "string" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
+
+  # ===== PROJECTS =====
+  - name: "projects"
+    label: "📁 Projects"
+    files:
+      - name: "projects_list"
+        label: "Projects / Portfolio"
+        file: "_data/projects.json"
+        fields:
+          - label: "Projects"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Project Name", name: "name", widget: "string" }
+              - { label: "Category (web/mobile/website/cctv/server/network)", name: "category", widget: "string" }
+              - { label: "Category Label", name: "categoryLabel", widget: "string" }
+              - { label: "Image URL", name: "image", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+
+  # ===== TESTIMONIALS =====
+  - name: "testimonials"
+    label: "⭐ Testimonials"
+    files:
+      - name: "testimonials_list"
+        label: "Client Reviews"
+        file: "_data/testimonials.json"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Position & Company", name: "position", widget: "string" }
+              - { label: "Review Text", name: "text", widget: "text" }
+              - { label: "Stars (1-5)", name: "stars", widget: "number", min: 1, max: 5 }
+              - { label: "Initials (e.g. RK)", name: "initials", widget: "string" }

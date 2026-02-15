@@ -1,0 +1,159 @@
+---
+layout: base.njk
+pageTitle: "Server AMC & IT Maintenance"
+pageDescription: "Professional Server AMC and IT maintenance services by Vertaxes Technologies. 24/7 monitoring, backup, security updates, and downtime prevention."
+activePage: "server-amc"
+permalink: /server-amc/
+---
+{% block head %}
+<style>
+    .timeline{position:relative;padding:40px 0}
+    .timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;background:var(--gradient-btn);transform:translateX(-50%)}
+    .timeline-item{position:relative;width:50%;padding:20px 40px;margin-bottom:20px}
+    .timeline-item:nth-child(odd){left:0;text-align:right}
+    .timeline-item:nth-child(even){left:50%}
+    .timeline-dot{position:absolute;top:28px;width:18px;height:18px;background:var(--gradient-btn);border-radius:50%;box-shadow:0 0 20px rgba(37,99,235,.4);z-index:2}
+    .timeline-item:nth-child(odd) .timeline-dot{right:-9px}
+    .timeline-item:nth-child(even) .timeline-dot{left:-9px}
+    .timeline-content{background:var(--card);padding:24px;border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition)}
+    .timeline-content:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+    .timeline-content h4{margin-bottom:6px;color:var(--navy)}
+    .timeline-content p{color:var(--grey);font-size:.9rem;line-height:1.6}
+    .timeline-step{display:inline-block;background:var(--gradient-btn);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:50px;margin-bottom:8px}
+    @media(max-width:768px){
+        .timeline::before{left:20px}
+        .timeline-item{width:100%;left:0!important;text-align:left!important;padding-left:50px;padding-right:16px}
+        .timeline-item .timeline-dot{left:11px!important;right:auto!important}
+    }
+</style>
+{% endblock %}
+
+<section class="page-banner">
+    <h1>Server AMC & <span class="gradient-text">IT Maintenance</span></h1>
+    <p>Keep your servers running at peak performance with our comprehensive maintenance contracts</p>
+    <div class="breadcrumb"><a href="/">Home</a> <span>/</span> <span>Server AMC</span></div>
+</section>
+
+<!-- AMC Benefits -->
+<section style="padding:80px 0;background:var(--bg)">
+    <div class="container">
+        <div class="section-header" data-animate="fade-up">
+            <span class="section-tag">Server AMC</span>
+            <h2 class="section-title">Comprehensive <span class="gradient-text">AMC Benefits</span></h2>
+            <p class="section-desc">Our Annual Maintenance Contracts ensure your IT infrastructure stays healthy, secure, and optimized year-round.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+            {% set amcBenefits = [
+                {"icon":"fas fa-desktop","title":"24/7 Server Monitoring","desc":"Real-time monitoring with instant alerts for any issues or anomalies."},
+                {"icon":"fas fa-database","title":"Automated Backup","desc":"Scheduled backups with redundant offsite storage for disaster recovery."},
+                {"icon":"fas fa-shield-virus","title":"Security Patches","desc":"Regular security updates and vulnerability assessments."},
+                {"icon":"fas fa-microchip","title":"Hardware Support","desc":"On-site hardware inspection, repair, and component replacement."},
+                {"icon":"fas fa-gauge-high","title":"Performance Tuning","desc":"Resource optimization for maximum server efficiency and speed."},
+                {"icon":"fas fa-clock-rotate-left","title":"Uptime Guarantee","desc":"Proactive measures for maximum uptime and minimal business disruption."}
+            ] %}
+            {% for item in amcBenefits %}
+            <div class="amc-feature" data-animate="fade-up" data-delay="{{ loop.index0 * 50 }}">
+                <div class="amc-feature-icon"><i class="{{ item.icon }}"></i></div>
+                <div><h4>{{ item.title }}</h4><p>{{ item.desc }}</p></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Server Illustration + Image -->
+<section style="padding:80px 0;background:linear-gradient(180deg,var(--bg),#EEF2FF)">
+    <div class="container">
+        <div class="amc-grid">
+            <div class="amc-visual" data-animate="fade-right">
+                <div class="amc-3d-server">
+                    <div class="server-unit unit-1"><div class="server-leds"><span class="led led-green"></span><span class="led led-green"></span><span class="led led-blue"></span></div><div class="server-slots"><span></span><span></span><span></span><span></span></div></div>
+                    <div class="server-unit unit-2"><div class="server-leds"><span class="led led-green"></span><span class="led led-orange"></span><span class="led led-blue"></span></div><div class="server-slots"><span></span><span></span><span></span><span></span></div></div>
+                    <div class="server-unit unit-3"><div class="server-leds"><span class="led led-green"></span><span class="led led-green"></span><span class="led led-green"></span></div><div class="server-slots"><span></span><span></span><span></span><span></span></div></div>
+                    <div class="server-pulse"></div>
+                </div>
+            </div>
+            <div data-animate="fade-left">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&q=80" alt="Server Room" loading="lazy" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AMC Workflow Timeline -->
+<section style="padding:80px 0;background:var(--bg)">
+    <div class="container">
+        <div class="section-header" data-animate="fade-up">
+            <span class="section-tag">AMC Process</span>
+            <h2 class="section-title">Our AMC <span class="gradient-text">Workflow</span></h2>
+        </div>
+        <div class="timeline" data-animate="fade-up">
+            {% set steps = [
+                {"title":"Site Assessment","desc":"Our engineers visit your site to assess the current server infrastructure and requirements."},
+                {"title":"Custom AMC Plan","desc":"We design a tailored maintenance plan based on your specific needs and budget."},
+                {"title":"Contract Setup","desc":"Finalize the AMC contract with clear terms, SLAs, and service commitments."},
+                {"title":"Monitoring Setup","desc":"Install monitoring tools and configure automated alerts and backup systems."},
+                {"title":"Ongoing Maintenance","desc":"Regular scheduled maintenance, security patches, and performance optimization."},
+                {"title":"Monthly Reports","desc":"Detailed monthly reports on server health, incidents, and optimization actions."}
+            ] %}
+            {% for step in steps %}
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-step">Step {{ loop.index }}</span>
+                    <h4>{{ step.title }}</h4>
+                    <p>{{ step.desc }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- AMC Request Form -->
+<section style="padding:80px 0;background:linear-gradient(180deg,#EEF2FF,var(--bg))">
+    <div class="container">
+        <div class="consultation-grid">
+            <div class="consultation-info" data-animate="fade-right">
+                <span class="section-tag">Get Started</span>
+                <h2 class="section-title">Request <span class="gradient-text">AMC Support</span></h2>
+                <p>Fill out the form and our server team will contact you within 30 minutes to discuss your AMC requirements.</p>
+                <div class="consultation-contact">
+                    <div class="consult-contact-item"><i class="fas fa-phone"></i><div><h4>Call Us</h4><a href="{{ site.phoneLink }}">{{ site.phone }}</a></div></div>
+                    <div class="consult-contact-item"><i class="fab fa-whatsapp"></i><div><h4>WhatsApp</h4><a href="{{ site.whatsappLink }}" target="_blank">{{ site.whatsapp }}</a></div></div>
+                    <div class="consult-contact-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></div>
+                </div>
+            </div>
+            <div class="consultation-form-wrapper" data-animate="fade-left">
+                <form class="consultation-form" name="amc-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="amc-request"><input type="hidden" name="bot-field">
+                    <div class="form-group"><label for="amcName">Full Name *</label><input type="text" id="amcName" name="full_name" placeholder="Your name" required></div>
+                    <div class="form-group"><label for="amcCompany">Company Name *</label><input type="text" id="amcCompany" name="company" placeholder="Company name" required></div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="amcPhone">Phone *</label><input type="tel" id="amcPhone" name="phone" placeholder="+91" required></div>
+                        <div class="form-group"><label for="amcEmail">Email *</label><input type="email" id="amcEmail" name="email" placeholder="email@company.com" required></div>
+                    </div>
+                    <div class="form-group"><label for="amcServers">Number of Servers</label><input type="number" id="amcServers" name="server_count" placeholder="e.g. 5" min="1"></div>
+                    <div class="form-group"><label for="amcMsg">Requirements</label><textarea id="amcMsg" name="message" rows="4" placeholder="Describe your server setup and AMC needs..."></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-glow btn-full"><i class="fas fa-paper-plane"></i> Request AMC Support</button>
+                    <div class="form-success" style="display:none"><i class="fas fa-check-circle"></i> Thank you! Our server team will contact you soon.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-bg-anim"></div>
+    <div class="container">
+        <div class="cta-content" data-animate="fade-up">
+            <h2>Need Reliable Server Maintenance?</h2>
+            <p>Let our experts keep your servers running 24/7 with proactive maintenance and support.</p>
+            <div class="cta-buttons">
+                <a href="{{ site.phoneLink }}" class="btn btn-white btn-glow"><i class="fas fa-phone"></i> Call Now</a>
+                <a href="{{ site.whatsappLink }}" class="btn btn-whatsapp-alt btn-glow" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="/contact/" class="btn btn-outline-white"><i class="fas fa-paper-plane"></i> Send Enquiry</a>
+            </div>
+        </div>
+    </div>
+</section>
