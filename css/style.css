@@ -10,18 +10,18 @@
 }
 
 :root {
-  --navy: #0A2540;
-  --blue: #2563EB;
-  --cyan: #06B6D4;
+  --navy: #020202;
+  --blue: #10B981;
+  --cyan: #34D399;
   --green: #22C55E;
-  --bg: #F8FAFC;
-  --text: #0F172A;
-  --grey: #64748B;
-  --card: #FFFFFF;
-  --gradient: linear-gradient(135deg, #0A2540, #2563EB, #06B6D4);
-  --gradient-btn: linear-gradient(135deg, #2563EB, #06B6D4);
-  --shadow: 0 4px 24px rgba(10, 37, 64, .08);
-  --shadow-lg: 0 12px 48px rgba(10, 37, 64, .12);
+  --bg: #000000;
+  --text: #F8FAFC;
+  --grey: #94A3B8;
+  --card: #111111;
+  --gradient: linear-gradient(135deg, #000000, #064e3b, #000000);
+  --gradient-btn: linear-gradient(135deg, #10B981, #059669);
+  --shadow: 0 4px 24px rgba(16, 185, 129, 0.15);
+  --shadow-lg: 0 12px 48px rgba(16, 185, 129, 0.2);
   --radius: 12px;
   --radius-lg: 20px;
   --font-heading: 'Outfit', sans-serif;
@@ -108,7 +108,7 @@ h3 {
 
 .section-tag {
   display: inline-block;
-  background: linear-gradient(135deg, rgba(37, 99, 235, .1), rgba(6, 182, 212, .1));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.1));
   color: var(--blue);
   font-size: .85rem;
   font-weight: 600;
@@ -328,10 +328,11 @@ h3 {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, .95);
+  background: rgba(5, 5, 5, 0.9);
   backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: var(--shadow);
-  padding: 8px 0
+  padding: 8px 0;
 }
 
 .navbar-inner {
@@ -407,7 +408,7 @@ h3 {
 .nav-link:hover,
 .nav-link.active {
   color: var(--blue);
-  background: rgba(37, 99, 235, .06)
+  background: rgba(16, 185, 129, 0.1);
 }
 
 .navbar:not(.scrolled) .nav-link {
@@ -439,7 +440,7 @@ h3 {
 
 .nav-btn-call {
   color: var(--blue);
-  background: rgba(37, 99, 235, .08)
+  background: rgba(16, 185, 129, 0.1);
 }
 
 .nav-btn-call:hover {
@@ -574,7 +575,7 @@ h3 {
 .hero-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(37, 99, 235, .3) 0%, transparent 60%)
+  background: radial-gradient(ellipse at 30% 50%, rgba(16, 185, 129, 0.2) 0%, transparent 60%);
 }
 
 .hero-inner {
@@ -673,13 +674,29 @@ h3 {
   height: 100%
 }
 
+/* Orbit Animation */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(190px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(190px) rotate(-360deg);
+  }
+}
+
 .floating-card {
   position: absolute;
-  background: rgba(255, 255, 255, .1);
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  /* Half of approx height */
+  margin-left: -70px;
+  /* Half of min-width */
+  background: rgba(16, 185, 129, 0.1);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, .2);
-  border-radius: 14px;
-  padding: 16px 20px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -687,42 +704,36 @@ h3 {
   font-size: .85rem;
   font-weight: 600;
   z-index: 5;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, .15)
+  box-shadow: 0 8px 32px rgba(16, 185, 129, .15);
+  border-radius: 50px;
+  min-width: 140px;
+  justify-content: center;
+  animation: orbit 25s linear infinite;
+}
+
+.card-1 {
+  animation-delay: 0s;
+}
+
+.card-2 {
+  animation-delay: -5s;
+}
+
+.card-3 {
+  animation-delay: -10s;
+}
+
+.card-4 {
+  animation-delay: -15s;
+}
+
+.card-5 {
+  animation-delay: -20s;
 }
 
 .floating-card i {
   font-size: 1.3rem;
-  color: var(--cyan)
-}
-
-.card-1 {
-  top: 5%;
-  left: 5%;
-  animation: float1 6s ease-in-out infinite
-}
-
-.card-2 {
-  top: 8%;
-  right: 8%;
-  animation: float2 7s ease-in-out infinite
-}
-
-.card-3 {
-  bottom: 30%;
-  right: 2%;
-  animation: float3 8s ease-in-out infinite
-}
-
-.card-4 {
-  bottom: 12%;
-  left: 0;
-  animation: float2 6.5s ease-in-out infinite
-}
-
-.card-5 {
-  bottom: 5%;
-  right: 25%;
-  animation: float1 7.5s ease-in-out infinite
+  color: var(--green)
 }
 
 .hero-center-orb {
@@ -761,7 +772,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 1.5px solid rgba(6, 182, 212, .3)
+  border: 1.5px solid rgba(52, 211, 153, 0.3);
 }
 
 .ring-1 {
@@ -786,14 +797,24 @@ h3 {
 .connection-lines {
   position: absolute;
   inset: 0;
-  z-index: 1
+  z-index: 1;
+  animation: orbit-spin 25s linear infinite;
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .conn-line {
-  stroke: rgba(6, 182, 212, .2);
+  stroke: rgba(16, 185, 129, 0.2);
   stroke-width: 1;
   stroke-dasharray: 5, 5;
-  animation: dash 3s linear infinite
 }
 
 /* Hero Particles */
@@ -851,7 +872,7 @@ h3 {
 .stat-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, .1), rgba(6, 182, 212, .1));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.1));
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -865,7 +886,7 @@ h3 {
   font-family: var(--font-heading);
   font-size: 2.8rem;
   font-weight: 800;
-  color: var(--navy);
+  color: #fff;
   display: inline
 }
 
@@ -886,7 +907,7 @@ h3 {
 /* --- SERVICES SECTION --- */
 .services-section {
   padding: 100px 0;
-  background: linear-gradient(180deg, var(--bg) 0%, #EEF2FF 100%)
+  background: linear-gradient(180deg, var(--bg) 0%, #050505 100%)
 }
 
 .services-grid {
@@ -901,7 +922,7 @@ h3 {
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
-  border: 1px solid rgba(0, 0, 0, .04)
+  border: 1px solid rgba(255, 255, 255, .05)
 }
 
 .service-card:hover {
@@ -929,7 +950,7 @@ h3 {
 .service-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 30%, rgba(10, 37, 64, .6))
+  background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, .8))
 }
 
 .service-card-body {
@@ -949,7 +970,7 @@ h3 {
   margin: -44px 0 16px;
   position: relative;
   z-index: 2;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, .3)
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3)
 }
 
 .service-card-body h3 {
@@ -1266,7 +1287,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 30px rgba(37, 99, 235, .4);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, .4);
   animation: float1 4s ease-in-out infinite
 }
 
@@ -1289,7 +1310,7 @@ h3 {
 /* --- HARDWARE SECTION --- */
 .hardware-section {
   padding: 100px 0;
-  background: linear-gradient(180deg, var(--bg), #EEF2FF)
+  background: linear-gradient(180deg, var(--bg), #0A0A0A);
 }
 
 .hardware-grid {
@@ -1359,7 +1380,7 @@ h3 {
 .cloud-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(37, 99, 235, .2), transparent 60%)
+  background: radial-gradient(ellipse at 70% 50%, rgba(16, 185, 129, .2), transparent 60%)
 }
 
 .cloud-grid {
@@ -1424,7 +1445,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 6rem;
-  color: rgba(6, 182, 212, .3);
+  color: rgba(52, 211, 153, .3);
   animation: float1 5s ease-in-out infinite
 }
 
@@ -1529,7 +1550,7 @@ h3 {
 .filter-btn {
   padding: 8px 22px;
   border-radius: 50px;
-  border: 1.5px solid rgba(37, 99, 235, .2);
+  border: 1.5px solid rgba(16, 185, 129, 0.2);
   background: transparent;
   color: var(--grey);
   font-weight: 500;
@@ -1582,7 +1603,7 @@ h3 {
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 20%, rgba(10, 37, 64, .85));
+  background: linear-gradient(180deg, transparent 20%, rgba(0, 0, 0, 0.9));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1613,7 +1634,7 @@ h3 {
 /* --- TESTIMONIALS --- */
 .testimonials-section {
   padding: 100px 0;
-  background: linear-gradient(180deg, var(--bg), #EEF2FF)
+  background: linear-gradient(180deg, var(--bg), #0A0A0A);
 }
 
 .testimonials-grid {
@@ -1714,7 +1735,7 @@ h3 {
   width: 44px;
   height: 44px;
   min-width: 44px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, .1), rgba(6, 182, 212, .1));
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(52, 211, 153, 0.1));
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1768,7 +1789,7 @@ h3 {
 .form-group select,
 .form-group textarea {
   padding: 13px 16px;
-  border: 1.5px solid rgba(0, 0, 0, .1);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   font-size: .92rem;
   font-family: var(--font-body);
@@ -1782,7 +1803,7 @@ h3 {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--blue);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, .1)
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1)
 }
 
 .form-group textarea {
@@ -1821,7 +1842,7 @@ h3 {
 .cta-bg-anim {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(6, 182, 212, .2), transparent 50%), radial-gradient(circle at 80% 50%, rgba(37, 99, 235, .2), transparent 50%);
+  background: radial-gradient(circle at 20% 50%, rgba(52, 211, 153, .2), transparent 50%), radial-gradient(circle at 80% 50%, rgba(16, 185, 129, .2), transparent 50%);
   animation: cta-shift 6s ease-in-out infinite alternate
 }
 

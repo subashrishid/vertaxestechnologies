@@ -48,18 +48,18 @@ permalink: /
                     <div class="orb-core"><i class="fas fa-microchip"></i></div>
                 </div>
                 <svg class="connection-lines" viewBox="0 0 500 500">
-                    <line class="conn-line" x1="250" y1="250" x2="100" y2="80" />
-                    <line class="conn-line" x1="250" y1="250" x2="400" y2="100" />
-                    <line class="conn-line" x1="250" y1="250" x2="420" y2="300" />
-                    <line class="conn-line" x1="250" y1="250" x2="100" y2="380" />
-                    <line class="conn-line" x1="250" y1="250" x2="300" y2="430" />
+                    <line class="conn-line" x1="250" y1="250" x2="430" y2="250" />
+                    <line class="conn-line" x1="250" y1="250" x2="305" y2="421" />
+                    <line class="conn-line" x1="250" y1="250" x2="104" y2="355" />
+                    <line class="conn-line" x1="250" y1="250" x2="104" y2="144" />
+                    <line class="conn-line" x1="250" y1="250" x2="305" y2="78" />
                 </svg>
             </div>
         </div>
     </div>
     <div class="hero-wave">
         <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,30 1440,60 L1440,120 L0,120 Z" fill="#F8FAFC" />
+            <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,30 1440,60 L1440,120 L0,120 Z" fill="#000000" />
         </svg>
     </div>
 </section>
@@ -263,15 +263,15 @@ permalink: /
 </section>
 
 <!-- ========== VIDEO SHOWCASE (MP4) ========== -->
-<section id="video" style="padding:80px 0;background:linear-gradient(180deg,var(--navy),#0F1B2E);position:relative;overflow:hidden">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,99,235,.15),transparent 60%)"></div>
+<section id="video" style="padding:80px 0;background:linear-gradient(180deg,var(--navy),#064e3b);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(16, 185, 129, .15),transparent 60%)"></div>
     <div class="container" style="position:relative;z-index:2">
         <div class="section-header" data-animate="fade-up" style="text-align:center">
             <span class="section-tag" style="background:rgba(255,255,255,.1);color:var(--cyan)">Watch & Learn</span>
             <h2 class="section-title" style="color:#fff">{{ site.videoTitle | default("See Us in <span class='gradient-text'>Action</span>") | safe }}</h2>
             <p class="section-desc" style="color:rgba(255,255,255,.6)">{{ site.videoSubtitle }}</p>
         </div>
-        <div data-animate="fade-up" style="max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 40px rgba(37,99,235,.15);border:1px solid rgba(255,255,255,.1)">
+        <div data-animate="fade-up" style="max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4),0 0 40px rgba(16, 185, 129, .15);border:1px solid rgba(255,255,255,.1)">
             <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80" style="width:100%;display:block;background:#000;">
                 <source src="{{ site.videoFile }}" type="video/mp4">
                 <p style="color:#fff;text-align:center;padding:40px;">Your browser does not support the video tag. <a href="{{ site.videoFile }}" style="color:var(--cyan);">Download the video</a>.</p>
